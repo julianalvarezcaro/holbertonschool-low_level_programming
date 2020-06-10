@@ -3,6 +3,8 @@ int main(void);
 
 /**
 * main - Prints a message
+*
+* Return: 0 always
 */
 int main(void)
 {
