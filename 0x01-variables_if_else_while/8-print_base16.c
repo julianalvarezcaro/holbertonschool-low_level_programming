@@ -3,7 +3,7 @@
 /**
 * main - prints every digit from hexadecimal
 *
-* Returns: 0 always
+* Return: 0 always
 */
 int main(void)
 {
