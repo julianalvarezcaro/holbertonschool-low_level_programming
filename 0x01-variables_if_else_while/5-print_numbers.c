@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+int main(void);
 /**
 * main - Will display every single digit of base 10
 *
@@ -12,4 +12,5 @@ int main(void)
 	for (base = 0; base < 10; base++)
 		printf("%d", base);
 	printf("\n");
+	return (0);
 }
