@@ -8,27 +8,27 @@
 
 int main(void)
 {
-	int firstDig;
+	int firDig;
 	int secDig;
 	int thirdDig;
-	int fourthDig;
+	int fourDig;
 
-	for (firstDig = 48; firstDig < 58; firstDig++)
+	for (firDig = 48; firDig < 58; firDig++)
 	{
 		for (secDig = 48; secDig < 58; secDig++)
 		{
-		for (thirdDig = firstDig; thirdDig < 58; thirdDig++)
+		for (thirdDig = firDig; thirdDig < 58; thirdDig++)
 		{
-		for (fourthDig = secDig; fourthDig < 58; fourthDig++)
+		for (fourDig = secDig; fourDig < 58; fourDig++)
 		{
-		if ((firstDig + secDig) != (thirdDig + fourthDig))
+		if ((firDig + secDig) != (thirdDig + fourDig))
 		{
-		putchar(firstDig);
+		putchar(firDig);
 		putchar(secDig);
 		putchar(' ');
 		putchar(thirdDig);
-		putchar(fourthDig);
-		if (firstDig < 57 || secDig < 56 || thirdDig < 57 || fourthDig < 57)
+		putchar(fourDig);
+		if (firDig < 57 || secDig < 56 || thirdDig < 57 || fourDig < 57)
 		{
 		putchar(',');
 		putchar(' ');
