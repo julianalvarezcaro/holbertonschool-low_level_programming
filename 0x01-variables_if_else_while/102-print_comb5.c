@@ -19,9 +19,11 @@ int main(void)
 		{
 		for (thirdDig = firDig; thirdDig < 58; thirdDig++)
 		{
-		for (fourDig = secDig; fourDig < 58; fourDig++)
+		for (fourDig = 48; fourDig < 58; fourDig++)
 		{
-		if ((firDig + secDig) != (thirdDig + fourDig))
+		if (((firDig * 10) + secDig) != ((thirdDig * 10) + fourDig))
+		{
+		if (((firDig * 10) + secDig) < ((thirdDig * 10) + fourDig))
 		{
 		putchar(firDig);
 		putchar(secDig);
@@ -32,6 +34,7 @@ int main(void)
 		{
 		putchar(',');
 		putchar(' ');
+		}
 		}
 		}
 		}
