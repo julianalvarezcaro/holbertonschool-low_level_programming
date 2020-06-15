@@ -1,7 +1,21 @@
-#include <unistd.h>
+#include "holberton.h"
 
-int main()
+/**
+* main - will print "Holberton"
+*
+* Return: 0 always
+*/
+int main(void)
 {
-	write(1, "Holberton\n", 10);
-	return(0);
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
+	return (0);
 }
