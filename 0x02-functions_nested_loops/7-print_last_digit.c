@@ -12,13 +12,10 @@ int print_last_digit(int n)
 	int last_dig;
 	int putvar;
 
+	last_dig = n % 10;
 	if (n < 0)
 	{
-		last_dig = -n % 10;
-	}
-	else
-	{
-		last_dig = n % 10;
+		last_dig = -last_dig;
 	}
 	putvar = last_dig + 48;
 	_putchar(putvar);
