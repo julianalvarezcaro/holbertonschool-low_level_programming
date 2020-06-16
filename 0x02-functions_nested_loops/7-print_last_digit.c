@@ -10,6 +10,7 @@
 int print_last_digit(int n)
 {
 	int last_dig;
+	int putvar;
 
 	if (n < 0)
 	{
@@ -19,6 +20,7 @@ int print_last_digit(int n)
 	{
 		last_dig = n % 10;
 	}
-	_putchar(last_dig + 48);
+	putvar = last_dig + 48;
+	_putchar(putvar);
 	return (last_dig);
 }
