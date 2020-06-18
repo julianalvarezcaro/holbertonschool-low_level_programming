@@ -17,6 +17,6 @@ int main(void)
 		number /= mod;
 		}
 	}
-	printf("%ld\n", mod);
+	printf("%ld\n", mod - 1);
 	return (0);
 }
