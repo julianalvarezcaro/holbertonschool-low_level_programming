@@ -12,7 +12,7 @@ void print_diagonal(int n)
 	int countLines;
 	int countSpaces;
 
-	if (n != 0)
+	if (n > 0)
 	{
 	for (countLines = 0; countLines < n; countLines++)
 	{
