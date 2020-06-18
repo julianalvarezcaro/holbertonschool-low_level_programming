@@ -1,17 +1,16 @@
 #include <stdio.h>
 
 /**
+  * main - prints the largest prime factor
   *
-  *
-  *
-  *
+  * Return: void
   */
 int main(void)
 {
 	long int number = 612852475143;
 	long mod;
 
-	for (mod=2; mod <= number; mod++)
+	for (mod = 2; mod <= number; mod++)
 	{
 		if (number % mod == 0)
 		{
@@ -19,5 +18,5 @@ int main(void)
 		}
 	}
 	printf("%ld\n", mod);
-	return(0);
+	return (0);
 }
