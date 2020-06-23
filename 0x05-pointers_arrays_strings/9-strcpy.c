@@ -17,5 +17,6 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[len] = src[len];
 	}
+	dest[len + 1] = '\0';
 	return (puntero);
 }
