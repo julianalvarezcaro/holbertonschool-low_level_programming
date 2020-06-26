@@ -40,7 +40,7 @@ char *cap_string(char *s)
 		}
 		else if (s[len] >= 65 && s[len] <= 90)
 			cap = 0;
-		else if (s[len] != sep[countSep])
+		else if (s[len] != sep[countSep - 1])
 			cap = 0;
 
 	}
