@@ -1,4 +1,4 @@
-#include "holberton.c"
+#include "holberton.h"
 
 /**
   * rot13 - encondes a string using rot13
@@ -10,8 +10,9 @@
 char *rot13(char *s)
 {
 	int len;
-	char rotin[52] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
-	char rotout[52] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
+	int lett;
+	char rotin[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rotout[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (len = 0; s[len] != '\0'; len++)
 	{
@@ -20,6 +21,7 @@ char *rot13(char *s)
 			if (s[len] == rotin[lett])
 			{
 				s[len] = rotout[lett];
+				break;
 			}
 		}
 	}
