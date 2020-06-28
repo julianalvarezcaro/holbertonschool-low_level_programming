@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-  * _strtr - finds first ocurrence of needle in s
+  * _strstr - finds first ocurrence of needle in s
   *
   * @haystack: string
   * @needle: string to be found
