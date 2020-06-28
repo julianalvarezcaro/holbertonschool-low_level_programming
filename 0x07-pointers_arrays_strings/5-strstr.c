@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
-  * _strstr - finds first ocurrence of needle in s
+  * _strtr - finds first ocurrence of needle in s
   *
-  * @s: string
-  * @accept: string to be found
+  * @haystack: string
+  * @needle: string to be found
   *
   * Return: Pointer to the first ocurrence
   */
@@ -24,7 +24,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			need = needle;
 			haystack++;
-			hay++;
+			hay = haystack;;
 		}
 	}
 	if (*need == '\0')
