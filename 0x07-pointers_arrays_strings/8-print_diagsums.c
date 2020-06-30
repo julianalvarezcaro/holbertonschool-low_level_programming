@@ -11,7 +11,6 @@
 void print_diagsums(int *a, int size)
 {
 	int diag;
-	//int *ptr = a;
 	int suma = 0;
 
 	for (diag = 0; diag < size * size; diag = diag + size + 1)
