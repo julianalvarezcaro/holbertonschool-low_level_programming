@@ -14,19 +14,15 @@ void print_diagsums(int *a, int size)
 	//int *ptr = a;
 	int suma = 0;
 
-	for (diag = 0; diag < size; diag++)
+	for (diag = 0; diag < size * size; diag = diag + size + 1)
 	{
-		//suma += (*(a + diag) + diag);
-		printf("%d, ", *(*(a + diag) + diag));
-		//a++;
+		suma += a[diag];
 	}
 	printf("%d, ", suma);
 	suma = 0;
-	//ptr = a;
-	for (diag = size - 1; diag >= 0; diag--)
+	for (diag = size - 1; diag <= (size * size) - size; diag = diag + size - 1)
 	{
-		//suma += (*ptr)[diag];
-		a++;
+		suma += a[diag];
 	}
 	printf("%d\n", suma);
 }
