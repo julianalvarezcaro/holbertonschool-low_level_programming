@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-  * is_prime_number - checks if n is a prime number
+  * is_prime_number - calls aux function
   *
   * @n: int to be checked
   *
@@ -17,6 +17,14 @@ int is_prime_number(int n)
 		return (prime_aux(n, 2));
 }
 
+/**
+  * prime_aux - check if an int is a prime number
+  *
+  * @n: int ot be checked
+  * @check: possible value that could be a divisor
+  *
+  * Return: 1 if prime. 0 otherwise
+  */
 int prime_aux(int n, int check)
 {
 	if (check >= n / 2)
