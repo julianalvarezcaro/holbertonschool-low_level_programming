@@ -12,5 +12,7 @@ int sqrt_aux(int n, int counter);
 int is_prime_number(int n);
 int prime_aux(int n, int check);
 int is_palindrome(char *s);
+char *last_pal(char *s);
+int comp_pal(char *s, char *ptr);
 
 #endif
