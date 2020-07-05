@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
 		for (loop = 1; loop < argc; loop++)
 		{
 			if (*argv[loop] < 48 || *argv[loop] > 57)
-			{	
+			{
 				printf("Error\n");
 				return (1);
 			}
-			else 
+			else
 				add += atoi(argv[loop]);
 		}
 		printf("%d\n", add);
