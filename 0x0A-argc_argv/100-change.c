@@ -11,45 +11,56 @@
 int main(int argc, char *argv[])
 {
 	int total;
-	int progress;
-	int coins;
 
-	if(argc != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (atoi(argv[1]) < 0)
+	total = atoi(argv[1]);
+	if (total < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	progress = 0;
-	coins = 0;
-	total = atoi(argv[1]);
+	return (coins_aux(total, 0, 0));
+
+}
+
+/**
+  * coins_aux - is in charge of counting the amount of coins needed
+  *
+  * @total: total amout to be reached on coins
+  * @progress: counter of money in coins
+  * @coins: number of coins so far
+  *
+  * Return: 0 always
+  */
+int coins_aux(int total, int progress, int coins)
+{
 	while (progress < total)
 	{
-		if(total - progress >= 25)
+		if (total - progress >= 25)
 		{
 			progress += 25;
 			coins++;
 		}
-		else if(total - progress >= 10)
+		else if (total - progress >= 10)
 		{
 			progress += 10;
 			coins++;
 		}
-		else if(total - progress >= 5)
+		else if (total - progress >= 5)
 		{
 			progress += 5;
 			coins++;
 		}
-		else if(total - progress >= 2)
+		else if (total - progress >= 2)
 		{
 			progress += 2;
 			coins++;
 		}
-		else if(total - progress == 1)
+		else if (total - progress == 1)
 		{
 			progress += 1;
 			coins++;
