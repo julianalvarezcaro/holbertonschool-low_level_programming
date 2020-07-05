@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <ctype.h>
 
 /**
   * main - prints addition of 2 numbers
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (loop = 1; loop < argc; loop++)
 		{
-			if (*argv[loop] < 48 || *argv[loop] > 57)
+			if (isdigit(*argv[loop] == 0))
 			{
 				printf("Error\n");
 				return (1);
