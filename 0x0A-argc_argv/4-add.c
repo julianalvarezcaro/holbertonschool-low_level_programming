@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 {
 	int loop;
 	int add = 0;
+	int che, ck;
+	char *num;
 
 	if (argc == 1)
 	{
@@ -21,7 +23,13 @@ int main(int argc, char *argv[])
 	}
 	for (loop = 1; loop < argc; loop++)
 	{
-		if (isdigit(*argv[loop]) == 0)
+		num = argv[loop];
+		for (che = 0; num[che] != '\0'; che++)
+		{
+			if (num[che] < 48 || num[che] > 57)
+				ck = 1;
+		}
+		if (ck == 1)
 		{
 			printf("Error\n");
 			return (1);
