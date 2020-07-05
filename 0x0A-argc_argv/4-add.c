@@ -15,20 +15,20 @@ int main(int argc, char *argv[])
 	int add = 0;
 
 	if (argc == 1)
-		printf("0\n");
-	else
 	{
-		for (loop = 1; loop < argc; loop++)
-		{
-			if (isdigit(*argv[loop] == 0))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-				add += atoi(argv[loop]);
-		}
-		printf("%d\n", add);
+		printf("0\n");
+		return (0);
 	}
+	for (loop = 1; loop < argc; loop++)
+	{
+		if (isdigit(*argv[loop]) == 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+			add += atoi(argv[loop]);
+	}
+	printf("%d\n", add);
 	return (0);
 }
