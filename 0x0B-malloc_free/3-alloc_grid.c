@@ -17,12 +17,12 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	matrix = (int **) malloc(width * sizeof(int *));
+	matrix = (int **) malloc(height * sizeof(int *));
 	if (matrix == NULL)
 		return (NULL);
 	for (loop = 0; loop < height; loop++)
 	{
-		matrix[loop] = (int *) malloc(height * sizeof(int));
+		matrix[loop] = (int *) malloc(width * sizeof(int));
 		if (matrix[loop] == NULL)
 			return (NULL);
 	}
