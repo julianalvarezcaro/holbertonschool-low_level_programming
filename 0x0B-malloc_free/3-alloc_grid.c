@@ -8,7 +8,7 @@
   *
   * Return: pointer to the matrix
   */
-int **alloc_grid(int width, int height) // 5, 6
+int **alloc_grid(int width, int height)
 {
 	int **matrix;
 	int loop;
@@ -26,7 +26,7 @@ int **alloc_grid(int width, int height) // 5, 6
 		matrix[loop] = malloc(width * sizeof(int));
 		if (matrix[loop] == NULL)
 		{
-			for(fre = 0; fre < height; fre++)
+			for (fre = 0; fre < height; fre++)
 			{
 				free(matrix[fre]);
 			}
