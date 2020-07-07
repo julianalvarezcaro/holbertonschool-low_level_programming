@@ -23,7 +23,7 @@ int **alloc_grid(int width, int height) // 5, 6
 		return (NULL);
 	for (loop = 0; loop < height; loop++)
 	{
-		matrix[loop] = (int *) malloc(width * sizeof(int));
+		matrix[loop] = malloc(width * sizeof(int));
 		if (matrix[loop] == NULL)
 		{
 			for(fre = 0; fre < height; fre++)
