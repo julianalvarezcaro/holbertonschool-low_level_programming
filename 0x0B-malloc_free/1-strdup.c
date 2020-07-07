@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include "stdio.h"
 /**
   * _strdup - allocates a new space in memory containing a copy of a string
   *
@@ -17,6 +17,7 @@ char *_strdup(char *str)
 	for (len = 0; str[len] != '\0'; len++)
 	{
 	}
+	len++;
 	ptr = (char *) malloc(len * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
