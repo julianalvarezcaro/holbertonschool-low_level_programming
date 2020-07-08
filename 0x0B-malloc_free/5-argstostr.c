@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 	int total;
 	int check;
 
-	if (ac == 0|| ac == 1 || av == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	total = 0;
 	for (argc = 0; argc < ac; argc++)
