@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 		{
 			total++;
 		}
-		total++;
+		total += 2;
 	}
 	str = malloc(total * sizeof(char));
 	if (str == NULL)
@@ -40,6 +40,7 @@ char *argstostr(int ac, char **av)
 			check++;
 		}
 		str[check] = '\n';
+		str[++check] = '\0';
 		check++;
 	}
 	return (str);
