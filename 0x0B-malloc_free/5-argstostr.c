@@ -28,6 +28,7 @@ char *argstostr(int ac, char **av)
 		}
 		total++;
 	}
+	total++;
 	str = malloc(total * sizeof(char));
 	if (str == NULL)
 		return (NULL);
