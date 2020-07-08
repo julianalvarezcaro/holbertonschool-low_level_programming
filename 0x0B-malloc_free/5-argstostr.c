@@ -19,7 +19,6 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	total = 0;
-	argv = 0;
 	for (argc = 0; argc < ac; argc++)
 	{
 		for (argv = 0; av[argc][argv] != '\0'; argv++)
