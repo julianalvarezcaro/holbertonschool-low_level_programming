@@ -39,9 +39,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[loop] = s1[loop];
 	}
-	for (loop = 0; loop + len1 <= totalen; loop++)
+	for (loop = 0; loop + len1 < totalen; loop++)
 	{
 		ptr[len1 + loop] = s2[loop];
 	}
+	ptr[totalen] = '\0';
 	return (ptr);
 }
