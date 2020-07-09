@@ -47,6 +47,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[check] = s2[loop];
 		check++;
 	}
-	ptr[totalen] = '\0';
+	ptr[check] = '\0';
 	return (ptr);
 }
