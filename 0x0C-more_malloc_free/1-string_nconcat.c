@@ -5,6 +5,7 @@
   *
   * @s1: string to concat to
   * @s2: string to concat from
+  * @n: bytes to be concatenated
   *
   * Return: pointer to the new allocated memory space
   */
