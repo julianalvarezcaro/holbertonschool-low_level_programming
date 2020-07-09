@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[check] = s1[loop];
 		check++;
 	}
-	for (loop = 0; check < totalen; loop++)
+	for (loop = 0; check < totalen - 1; loop++)
 	{
 		ptr[check] = s2[loop];
 		check++;
