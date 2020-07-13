@@ -29,14 +29,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	nombre = malloc(lenn * sizeof(char));
 	dueno = malloc(lend * sizeof(char));
-	if(nombre == 0 || dueno == 0)
+	if (nombre == 0 || dueno == 0)
 		return (0);
-	for (; lenn > 0; lenn--)
-		nombre[lenn - 1] = name[lenn - 1];
-	for (; lend > 0; lend--)
-		dueno[lend - 1] = owner[lend - 1];
+	for (; lenn >= 0; lenn--)
+		nombre[lenn] = name[lenn];
+	for (; lend >= 0; lend--)
+		dueno[lend] = owner[lend];
 	firulais->name = nombre;
 	firulais->age = age;
 	firulais->owner = dueno;
-	return(firulais);
+	return (firulais);
 }
