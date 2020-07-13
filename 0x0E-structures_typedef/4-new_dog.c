@@ -26,8 +26,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 	}
 
-	nombre = malloc(lenn * sizeof(char));
-	dueno = malloc(lend * sizeof(char));
+	nombre = malloc((lenn * sizeof(char)) + 1);
+	dueno = malloc((lend * sizeof(char)) + 1);
 	if (nombre == NULL || dueno == NULL || firulais == NULL)
 	{
 		free(nombre);
@@ -39,8 +39,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		nombre[lenn] = name[lenn];
 	for (; lend >= 0; lend--)
 		dueno[lend] = owner[lend];
-	firulais->name = name;
+	firulais->name = nombre;
 	firulais->age = age;
-	firulais->owner = owner;
+	firulais->owner = dueno;
 	return (firulais);
 }
