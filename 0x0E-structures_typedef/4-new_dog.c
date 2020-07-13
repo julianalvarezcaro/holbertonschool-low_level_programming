@@ -29,8 +29,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	nombre = malloc(lenn * sizeof(char));
 	dueno = malloc(lend * sizeof(char));
-	if (nombre == 0 || dueno == 0)
-		return (0);
+	if (nombre == NULL || dueno == NULL)
+		return (NULL);
 	for (; lenn >= 0; lenn--)
 		nombre[lenn] = name[lenn];
 	for (; lend >= 0; lend--)
