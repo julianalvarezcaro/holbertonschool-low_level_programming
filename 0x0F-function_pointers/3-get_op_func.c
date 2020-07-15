@@ -18,9 +18,9 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	int i;
+
 	while (i < 5)
 	{
-		//printf("%");
 		if (*s == *(ops[i].op))
 			return (ops[i].f);
 		i++;

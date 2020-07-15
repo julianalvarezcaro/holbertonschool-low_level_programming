@@ -12,14 +12,15 @@ int op_add(int a, int b)
 {
 	return (a + b);
 }
- /**
-   * op_sub - substracts two numbers
-   *
-   * @a: int
-   * @b: int
-   *
-   * Return: int, result
-   */
+
+/**
+  * op_sub - substracts two ints
+  *
+  * @a: int
+  * @b: int
+  *
+  * Return: int, result
+  */
 int op_sub(int a, int b)
 {
 	return (a - b);
