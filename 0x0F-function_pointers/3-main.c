@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
   * main - exucutes an operation with two numbers
@@ -32,7 +34,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	result = (*get_op_func(argv[2]))(a, b);
+	result = (*get_op_func(argv[2])) (a, b);
 	printf("%d\n", result);
 	return (0);
 
