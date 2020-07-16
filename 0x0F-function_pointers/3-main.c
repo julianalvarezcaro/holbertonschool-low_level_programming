@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 	int a;
 	int b;
 	int result;
+	int (*ptrFun)(int, int);
 
 	if (argc != 4)
 	{
@@ -36,7 +37,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	result = (*get_op_func(argv[2])) (a, b);
+	ptrFun = get_op_func(argv[2]);
+	result = ptrFun(a, b);
+
 	printf("%d\n", result);
 	return (0);
 
