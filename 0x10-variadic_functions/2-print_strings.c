@@ -26,8 +26,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("(nil)");
 			else
 				printf("%s", curstring);
-			if (loop == n - 1)
-				printf("\n");
 		}
 	}
 	else
@@ -41,10 +39,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", curstring);
 			if (loop != n - 1)
 				printf("%s", separator);
-			else
-				printf("\n");
-
 		}
 	}
+	printf("\n");
 	va_end(myargs);
 }
