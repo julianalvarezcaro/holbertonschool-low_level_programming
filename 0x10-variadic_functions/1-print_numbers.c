@@ -21,7 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			if (nums != n - 1)
 				printf("%d", va_arg(myargs, int));
 			else
-				printf("%d\n", va_arg(myargs, int));
+				printf("%d", va_arg(myargs, int));
 		}
 	}
 	else
@@ -31,8 +31,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			if (nums != n - 1)
 				printf("%d%s", va_arg(myargs, int), separator);
 			else
-				printf("%d\n", va_arg(myargs, int));
+				printf("%d", va_arg(myargs, int));
 		}
 	}
+	printf("\n");
 	va_end(myargs);
 }
