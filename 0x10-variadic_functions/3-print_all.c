@@ -13,6 +13,7 @@ void print_all(const char * const format, ...)
 	va_list myargs;
 	int loopf;
 	int loops;
+	char *sep = "";
 
 	print_t printfs[] = {
 		{"c", print_c},
@@ -30,13 +31,13 @@ void print_all(const char * const format, ...)
 		{
 			if (format[loopf] == *(printfs[loops].format))
 			{
+				printf("%s", sep);
 				(printfs[loops].function) (myargs);
+				sep = ", ";
 				break;
 			}
 			loops++;
 		}
-		if (format[loopf + 1] != '\0' && printfs[loops].format != NULL)
-			printf(", ");
 		loopf++;
 	}
 	printf("\n");
@@ -87,5 +88,10 @@ void print_f(va_list myarg)
   */
 void print_s(va_list myarg)
 {
-	printf("%s", va_arg(myarg, char *));
+	char *s;
+
+	s = va_arg(myarg, char *);
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s", s);
 }
