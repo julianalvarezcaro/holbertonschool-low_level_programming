@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
@@ -21,9 +22,9 @@ typedef struct prints
 	char *form;
 	void (*function)(va_list);
 } print_t;
-void print_c(va_list myarg);
-void print_i(va_list myarg);
-void print_f(va_list myarg);
-void print_s(va_list myarg);
+void print_c(va_list ch);
+void print_i(va_list entero);
+void print_f(va_list flotante);
+void print_s(va_list cadena);
 
 #endif
