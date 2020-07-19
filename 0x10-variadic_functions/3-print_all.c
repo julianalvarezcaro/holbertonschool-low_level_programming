@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 	};
 	loopf = 0;
 	va_start(myargs, format);
-	while (format[loopf] != '\0' && format != NULL)
+	while (format != NULL && format[loopf] != '\0')
 	{
 		loops = 0;
 		while (loops < 4)
