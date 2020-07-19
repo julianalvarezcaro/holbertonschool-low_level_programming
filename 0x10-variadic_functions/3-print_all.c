@@ -24,12 +24,12 @@ void print_all(const char * const format, ...)
 	};
 	loopf = 0;
 	va_start(myargs, format);
-	while (format[loopf] != '\0')
+	while (format[loopf] && format)
 	{
 		loops = 0;
-		while (printfs[loops].format != NULL)
+		while (printfs[loops].form != NULL)
 		{
-			if (format[loopf] == *(printfs[loops].format))
+			if (format[loopf] == *(printfs[loops].form))
 			{
 				printf("%s", sep);
 				(printfs[loops].function) (myargs);
