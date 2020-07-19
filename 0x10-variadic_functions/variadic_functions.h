@@ -10,4 +10,20 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+/**
+  * struct prints - prints an arg
+  *
+  * @format: format of the arg
+  * @function: says how to print the arg
+  */
+struct prints
+{
+	char *format;
+	void (*function) (va_list);
+};
+void print_c(va_list myarg);
+void print_i(va_list myarg);
+void print_f(va_list myarg);
+void print_s(va_list myarg);
+
 #endif
