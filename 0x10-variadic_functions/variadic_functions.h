@@ -16,11 +16,11 @@ void print_all(const char * const format, ...);
   * @format: format of the arg
   * @function: says how to print the arg
   */
-struct prints
+typedef struct prints
 {
 	char *format;
-	void (*function) (va_list);
-};
+	void (*function)(va_list);
+} print_t;
 void print_c(va_list myarg);
 void print_i(va_list myarg);
 void print_f(va_list myarg);

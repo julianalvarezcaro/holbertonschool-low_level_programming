@@ -14,8 +14,7 @@ void print_all(const char * const format, ...)
 	int loopf;
 	int loops;
 
-	struct prints printfs[] = 
-	{
+	print_t printfs[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"f", print_f},
@@ -43,21 +42,49 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
+/**
+  * print_c - prints a char
+  *
+  * @myarg: list to take the arg from
+  *
+  * Return: void
+  */
 void print_c(va_list myarg)
 {
 	printf("%c", va_arg(myarg, int));
 }
 
+/**
+  * print_i - prints an int
+  *
+  * @myarg: list to take the arg from
+  *
+  * Return: void
+  */
 void print_i(va_list myarg)
 {
 	printf("%d", va_arg(myarg, int));
 }
 
+/**
+  * print_f - prints a float
+  *
+  * @myarg: list to take the arg from
+  *
+  * Return: void
+  */
 void print_f(va_list myarg)
 {
 	printf("%f", va_arg(myarg, double));
 }
 
+/**
+  * print_s - prints a string
+  *
+  * @myarg: list to take the arg from
+  *
+  * Return: void
+  */
 void print_s(va_list myarg)
 {
 	printf("%s", va_arg(myarg, char *));
