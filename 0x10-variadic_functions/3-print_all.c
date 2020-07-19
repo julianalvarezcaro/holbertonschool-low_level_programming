@@ -23,8 +23,9 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	loopf = 0;
+	"ceis"
 	va_start(myargs, format);
-	while (format[loopf] && format)
+	while (format[loopf] && format) c
 	{
 		loops = 0;
 		while (printfs[loops].form != NULL)
@@ -41,6 +42,7 @@ void print_all(const char * const format, ...)
 		loopf++;
 	}
 	printf("\n");
+	va_end(myargs);
 }
 
 /**
