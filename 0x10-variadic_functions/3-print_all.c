@@ -24,10 +24,10 @@ void print_all(const char * const format, ...)
 	};
 	loopf = 0;
 	va_start(myargs, format);
-	while (format[loopf] && format)
+	while (format[loopf] != '\0' && format != NULL)
 	{
 		loops = 0;
-		while (printfs[loops].form != NULL)
+		while (loops < 4)
 		{
 			if (format[loopf] == *(printfs[loops].form))
 			{
