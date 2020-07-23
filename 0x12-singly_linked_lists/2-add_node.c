@@ -18,7 +18,11 @@ list_t *add_node(list_t **head, const char *str)
 	node = malloc(sizeof(list_t));
 	cpStr = strdup(str);
 	if (cpStr == NULL || node == NULL)
+	{
+		free(node);
+		free(cpStr);
 		return (NULL);
+	}
 	node->next = *head;
 	*head = node;
 	node->str = cpStr;
