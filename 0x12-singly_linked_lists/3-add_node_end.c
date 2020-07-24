@@ -28,7 +28,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*Just copied to check*/
 	node = malloc(sizeof(list_t));
 	cpStr = strdup(str);
-	if(cpStr == NULL || node == NULL)
+	if (cpStr == NULL || node == NULL)
 	{
 		free(node);
 		free(cpStr);
