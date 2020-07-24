@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-  * myStartupFun -prints soething before the main
+  * liebre - prints soething before the main
   */
 void __attribute__ ((constructor)) liebre(void)
 {
