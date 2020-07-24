@@ -1,16 +1,18 @@
 #include "lists.h"
 
 /**
-  * free_list - frees space of a list_t
-  *
-  * @head: list_t to free
-  */
+ * free_list - frees space of a list_t
+ *
+ * @head: list_t to free
+ */
 void free_list(list_t *head)
 {
-	if (head->next != NULL)
+	list_t *help;
+	while (head)
 	{
-		free_list(head->next);
+		help = head;
+		head = head->next;
+		free(help->str);
+		free(help);
 	}
-	free(head->str);
-	free(head);
 }
