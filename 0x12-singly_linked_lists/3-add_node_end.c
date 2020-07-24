@@ -28,6 +28,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		control = 1;
 	}
 	node = malloc(sizeof(list_t));
+	if (str == NULL)
+		return (NULL);
 	cpStr = strdup(str);
 	if (cpStr == NULL || node == NULL)
 	{
