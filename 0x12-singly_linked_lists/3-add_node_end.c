@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	int lenS;
 	int control = 0;
 
-	if (!string)
+	if (!str)
 	{
 		return (NULL);
 	}
