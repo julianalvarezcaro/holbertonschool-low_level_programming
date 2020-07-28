@@ -24,7 +24,5 @@ size_t print_listint(const listint_t *h)
 			cur = cur->next;
 		}
 	}
-	else
-		printf("\n");
 	return (nodes);
 }
