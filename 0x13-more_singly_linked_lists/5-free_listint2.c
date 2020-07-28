@@ -10,10 +10,11 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *foll;
-	listint_t *each = *head;
+	listint_t *each;
 
 	if (head == NULL || *head == NULL)
 		return;
+	each = *head;
 	while (each != NULL)
 	{
 		foll = each->next;
