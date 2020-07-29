@@ -44,12 +44,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		free(node);
 		return (NULL);
 	}
-	node->next = now->next;
 	node->n = n;
 	if (idx == 0)
+	{
+		node->next = *head;
 		*head = node;
+	}
 	else
+	{
+		node->next = now->next;
 		now->next = node;
+	}
 	return (node);
 }
 /**
