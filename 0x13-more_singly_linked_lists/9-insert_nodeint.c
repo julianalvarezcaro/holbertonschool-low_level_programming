@@ -71,6 +71,5 @@ listint_t *gotonow(listint_t *head, int idx)
 			return (NULL);
 		actual = actual->next;
 	}
-	printf("Ahora apunta a n: %d\n", actual->n);
 	return (actual);
 }
