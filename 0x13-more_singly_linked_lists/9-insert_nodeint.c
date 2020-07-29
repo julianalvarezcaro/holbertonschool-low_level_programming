@@ -31,19 +31,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		else
 			return (NULL);
 	}
+	now = gotonow(*head, idx);
+	if (now == NULL)
+		return (NULL);
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
 		return (NULL);
-	now = gotonow(*head, idx);
-	/*
-	 *La funcion retorna NULL en caso de que idx sea mas grande
-	 *que el numero de elementos de la lista
-	 */
-	if (now == NULL)
-	{
-		free(node);
-		return (NULL);
-	}
 	node->n = n;
 	if (idx == 0)
 	{
