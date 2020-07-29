@@ -21,8 +21,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		if (idx == 0)
 		{
 			node = malloc(sizeof(listint_t));
-			/*Falta verificacion en caso de que malloc falle*/
-			/*Planeo hacer funcion que haga malloc y verificacion*/
+			if (node == NULL)
+				return (NULL);
 			node->n = n;
 			node->next = NULL;
 			*head = node; /*Linea clave de la condicion*/
