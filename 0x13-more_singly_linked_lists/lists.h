@@ -31,6 +31,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 listint_t *gotoend(listint_t *end);
-listint_t *gotonow(listint_t *now, unsigned int idx);
+listint_t *gotonow(listint_t *now, int idx);
 
 #endif /* LISTS_H */

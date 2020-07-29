@@ -11,8 +11,7 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *now;
-	listint_t *node;
+	listint_t *now, *node;
 
 	if (head == NULL)
 		return (NULL);
@@ -33,7 +32,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	now = gotonow(*head, idx);
 	if (now == NULL)
+	{
 		return (NULL);
+	}
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
 		return (NULL);
@@ -53,22 +54,23 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 /**
  * gotonow - Sets a pointer to the index. No funciona para listas vacias
  *
- * @now: pointer that must be adjusted
+ * @head: pointer that must be adjusted
  * @idx: index that we are looking for
  *
  * Return: pointer to the node at the index
  */
-listint_t *gotonow(listint_t *now, unsigned int idx)
+listint_t *gotonow(listint_t *head, int idx)
 {
 	listint_t *actual;
-	unsigned int loop;
+	int loop;
 
-	actual = now;
-	for (loop = 0; loop < idx - 1; loop++)
+	actual = head;
+	for (loop = 0; loop < (idx - 1); loop++)
 	{
 		if (actual == NULL)
 			return (NULL);
 		actual = actual->next;
 	}
+	printf("Ahora apunta a n: %d\n", actual->n);
 	return (actual);
 }
