@@ -24,9 +24,5 @@ int get_bit(unsigned long int n, unsigned int index)
 		len++;
 	}
 	len--; /*Porque los indices se cuentan desde 0*/
-	if (index > len)
-	{
-		return (-1);
-	}
 	return (((n >> index) & 1));
 }
