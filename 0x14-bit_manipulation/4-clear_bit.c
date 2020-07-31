@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
-  * set_bit - sets a bit at an index to 1
+  * clear_bit - sets a bit at an index to 0
   *
   * @n: pointer to the number
-  * @index: index where the bit must be set to 1
+  * @index: index where the bit must be set to 0
   *
   * Return: 1 if works. -1 upon any error
   */
