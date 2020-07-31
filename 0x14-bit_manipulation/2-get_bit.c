@@ -13,6 +13,10 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int len;
 	unsigned int aux = n;
 
+	if (index > 63)
+	{
+		return (-1);
+	}
 	len = 0;
 	while (aux > 0)
 	{
