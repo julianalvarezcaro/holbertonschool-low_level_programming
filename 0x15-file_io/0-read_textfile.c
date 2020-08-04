@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
-  * read_textfile - reads a text from a file
-  *
-  * @filename: name of the file to be read
-  *
-  * @letters: amount of letters to be read and printed
-  *
-  * Return: Amount of letters it read and printed
-  */
+ * read_textfile - reads a text from a file
+ *
+ * @filename: name of the file to be read
+ *
+ * @letters: amount of letters to be read and printed
+ *
+ * Return: Amount of letters it read and printed
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int cc, fd, wriRet;
