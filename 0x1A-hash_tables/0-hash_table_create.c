@@ -25,7 +25,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		new = malloc(sizeof(hash_node_t));
 		if (new == NULL)
 		{
-            free_table(table);
+			free_table(table);
 			return (NULL);
 		}
 		new->next = NULL;
