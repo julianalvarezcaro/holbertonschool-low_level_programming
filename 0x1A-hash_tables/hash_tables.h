@@ -34,5 +34,6 @@ typedef struct hash_table_s
 
 
 hash_table_t *hash_table_create(unsigned long int size);
+void free_table(hash_table_t *table);
 
 #endif /*HASH_TABLES_H*/
