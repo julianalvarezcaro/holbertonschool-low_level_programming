@@ -40,5 +40,7 @@ void free_table(hash_table_t *table);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+hash_node_t *check_keys(hash_node_t *head, char *key);
+int update_key(hash_node_t *check, char *cp_value, hash_node_t *new);
 
 #endif /*HASH_TABLES_H*/
