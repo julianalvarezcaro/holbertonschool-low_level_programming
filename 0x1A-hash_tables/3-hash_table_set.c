@@ -42,6 +42,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (update_key(check, cp_value, new));
 		node = array[idx];
 		new->next = node;
+		new->key = cp_key;
 		array[idx] = new;
 		return (1);
 	}
