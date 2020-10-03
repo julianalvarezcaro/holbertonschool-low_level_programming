@@ -26,18 +26,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	cp_key = strdup(key);
-	if (cp_key == NULL)
-	{
-		free(new);
-		free(cp_value);
-		return (0);
-	}
 	array = ht->array;
 	if (array[idx])
 	{
 		check = check_keys(array[idx], cp_key);
 		if (check != NULL)
+		{
+			free(cp_key);
 			return (update_key(check, cp_value, new));
+		}
 		node = array[idx];
 		new->next = node;
 		new->value = cp_value;
