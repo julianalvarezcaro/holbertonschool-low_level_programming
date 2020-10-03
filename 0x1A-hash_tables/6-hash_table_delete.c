@@ -21,11 +21,12 @@ void hash_table_delete(hash_table_t *ht)
 		curr = array[loop];
 		while (curr)
 		{
-			next = curr->next;
-			free(curr->key);
-			free(curr->value);
-			free(curr);
-			curr = next;
+			next = curr;
+			curr = next->next;
+			free(next->key);
+			free(next->value);
+			free(next);
+
 		}
 	}
 	free(ht->array);
