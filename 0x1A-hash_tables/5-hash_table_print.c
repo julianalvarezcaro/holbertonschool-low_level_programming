@@ -1,4 +1,4 @@
-#include "hash_tables.h"
+nclude "hash_tables.h"
 
 /**
  * hash_table_print - prints all the elements of a hash table
@@ -16,7 +16,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 	printf("{");
-	for (loop = 0; loop < size; loop++)
+	for (loop = 0; loop < ht->size; loop++)
 	{
 		node = ht->array[loop];
 		while (node)
@@ -28,3 +28,4 @@ void hash_table_print(const hash_table_t *ht)
 	}
 	printf("}\n");
 }
+
