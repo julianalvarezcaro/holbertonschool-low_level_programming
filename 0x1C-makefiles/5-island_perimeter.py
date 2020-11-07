@@ -17,14 +17,20 @@ def island_perimeter(grid):
             left = col - 1
             right = col + 1
 
+            # If the current position is water, no perimeter must be added
             if here == 0:
                 continue
-            if grid[up][col] == 0:
+
+            # if format:
+            # if it is on the limits of the grid
+            # OR
+            # checks if the positions is a border of the island
+            if row == 0 or grid[up][col] == 0:
                 perimeter += 1
-            if grid[down][col] == 0:
+            if row + 1 == len(grid) or grid[down][col] == 0:
                 perimeter += 1
-            if grid[row][left] == 0:
+            if col == 0 or grid[row][left] == 0:
                 perimeter += 1
-            if grid[row][right] == 0:
+            if col + 1 == len(grid[row]) or grid[row][right] == 0:
                 perimeter += 1
     return perimeter
