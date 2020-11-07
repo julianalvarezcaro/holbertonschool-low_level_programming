@@ -3,6 +3,7 @@
 island_perimeter module
 """
 
+
 def island_perimeter(grid):
     """Function that returns the perimeter of an island represented by a grid
     """
